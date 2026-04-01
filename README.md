@@ -42,12 +42,26 @@ This is the **backend** of an AI-powered interview system built using **Python**
 - `DELETE /delete-session/{session_id}` – Delete a specific session
 - `DELETE /delete-user/{user_id}` – Delete a user and all related sessions
 - `GET /get-all-chats/{user_id}` – Retrieve all chat history of a user
+- `GET /section-status` – tell wether the session has been ended or not
 
 ---
 
-## Installation
+1. Setup environment variables
+# Example .env
+OPENAI_API_KEY=<your_openai_api_key>
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/ai-interview-backend.git
-cd ai-interview-backend
+2. Run the FastAPI server
+uvicorn main:app --reload
+
+Project Structure
+ai-interview-backend/
+│
+├─ main.py                # FastAPI application
+├─ pydantic_models.py              # Pydantic models for request/response validation
+├─ mongodb.py            # MongoDB connection and helper functions
+├─ jwt_hash.py                # JWT authentication and hashing utilities
+├─ prompts.py             #all the prompts which have been used in the project
+├─ MODEL.py           #openai model used in the project
+├─ utility_functions.py  #functions that are the backbone of the project
+├─ .env   #where you add your open_ai api key
+└─ README.md
