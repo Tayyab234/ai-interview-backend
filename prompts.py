@@ -155,22 +155,3 @@ Rules:
 prompt4 = PromptTemplate(template=p4)
 
 
-# Evaluate the previous answer.
-
-# Then ask the next question.
-
-# Context:
-# - Section: {name}
-# - Skills: {skills}
-# - Question in section: {question_in_section} of {question_count}
-# - Previously asked questions: {previous_questions}
-
-# Rules:
-# - Provide feedback and rating
-# - Ask only ONE question
-# - Do NOT repeat or rephrase previously asked questions
-# - Stay within the given skills
-# - Adjust difficulty progressively
-# - If this is the last question of the section, ask a deeper question
-# - Natural tone
-# - Do NOT mention question numbers
