@@ -47,21 +47,33 @@ This is the **backend** of an AI-powered interview system built using **Python**
 ---
 
 1. Setup environment variables
-# Example .env
-OPENAI_API_KEY=<your_openai_api_key>
+
+  OPENAI_API_KEY=<your_openai_api_key>
 
 2. Run the FastAPI server
-uvicorn main:app --reload
+   
+  uvicorn main:app --reload
 
-Project Structure
+3. Project Structure
+
 ai-interview-backend/
+
 │
+
 ├─ main.py                # FastAPI application
+
 ├─ pydantic_models.py              # Pydantic models for request/response validation
+
 ├─ mongodb.py            # MongoDB connection and helper functions
+
 ├─ jwt_hash.py                # JWT authentication and hashing utilities
+
 ├─ prompts.py             #all the prompts which have been used in the project
+
 ├─ MODEL.py           #openai model used in the project
+
 ├─ utility_functions.py  #functions that are the backbone of the project
+
 ├─ .env   #where you add your open_ai api key
+
 └─ README.md
